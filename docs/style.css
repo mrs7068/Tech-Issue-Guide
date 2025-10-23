@@ -1,0 +1,107 @@
+/* Base layout and color theme */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f9fa;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1da1f2, #004d7a);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header .subtitle {
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Navigation */
+nav {
+    background: #e0e0e0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #004d7a;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #1da1f2;
+    padding-bottom: 0.3rem;
+    color: #004d7a;
+}
+
+article {
+    margin-top: 1.2rem;
+    padding-left: 0.5rem;
+}
+
+/* Figures and images */
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Resource list */
+.resource-list li {
+    margin: 0.7rem 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #004d7a;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
