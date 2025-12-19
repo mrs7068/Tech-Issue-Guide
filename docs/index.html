@@ -30,15 +30,16 @@
                     <a href="#zotero">Readings</a>
                 </li>
             </ul>
+            <button class="mode-toggle" aria-label="Toggle light and dark mode">🌙</button>
         </nav>
-        <main>
+        <main id="main-content" tabindex="-1">
             <section id="overview">
                 <h2>Orientation: What Engagement Really Means</h2>
                 <p> Engagement is everywhere online—likes, shares, saves, comments, views, watch
-                    time, reactions. We often treat it as proof that something <em>matters</em> or
-                    “worked.” But across communication studies, psychology, UX design, and
-                    marketing, one conclusion is the same: engagement is designed. Platforms don’t
-                    just react to users—they actively shape behavior, emotion, and attention. </p>
+                    time, reactions. We often treat it as proof that something matters or “worked.”
+                    But across communication studies, psychology, UX design, and marketing, one
+                    conclusion is the same: engagement is designed. Platforms don’t just react to
+                    users—they actively shape behavior, emotion, and attention. </p>
                 <div class="pulse-note">
                     <strong>Hover for a quick clarification:</strong>
                     <span class="reveal">Engagement ≠ popularity. Engagement = how well a platform
@@ -67,9 +68,9 @@
                     <figcaption>Engagement metrics convert human attention into measurable,
                         comparable data.</figcaption>
                 </figure>
-                <p class="read-next">
-                    <strong>Next steps:</strong> Start with research on technological affordances to
-                    see why engagement is guided long before users make conscious choices. </p>
+                <p class="read-next"><strong>Next steps:</strong> Start with research on
+                    technological affordances to see why engagement is guided long before users make
+                    conscious choices. </p>
             </section>
             <section id="perspectives">
                 <h2>Key Perspectives on Engagement</h2>
@@ -97,10 +98,9 @@
                         <figcaption>Frictionless design blurs the line between enjoyment, habit, and
                             dependency.</figcaption>
                     </figure>
-                    <p class="read-next">
-                        <strong>Next steps:</strong> Explore short-form video addiction research and
-                        studies on how narcissistic communication patterns influence visibility.
-                    </p>
+                    <p class="read-next"><strong>Next steps:</strong> Explore short-form video
+                        addiction research and studies on how narcissistic communication patterns
+                        influence visibility.</p>
                 </article>
                 <article>
                     <h3>2. Industry & Professional Impact</h3>
@@ -123,9 +123,8 @@
                     </div>
                     <p> Professional takeaway: engagement should be interpreted, not worshiped. It’s
                         a signal of emotion, trust, relevance, and cultural alignment. </p>
-                    <p class="read-next">
-                        <strong>Next steps:</strong> Use this to rethink what “success” actually
-                        means in communication strategy. </p>
+                    <p class="read-next"><strong>Next steps:</strong> Use this to rethink what
+                        “success” actually means in communication strategy. </p>
                 </article>
                 <article>
                     <h3>3. Emerging Shifts & Contradictions</h3>
@@ -149,9 +148,8 @@
                                 through context, emotion, and power dynamics.</span>
                         </a>
                     </div>
-                    <p class="read-next">
-                        <strong>Next steps:</strong> Explore why controversy, trust, and values
-                        shape engagement outcomes. </p>
+                    <p class="read-next"><strong>Next steps:</strong> Explore why controversy,
+                        trust, and values shape engagement outcomes. </p>
                 </article>
             </section>
             <section id="zotero">
@@ -162,10 +160,9 @@
                 <a class="zotero-button"
                     href="https://www.zotero.org/groups/6198310/d4_ms_social-media-engagement"
                     target="_blank"> Explore the Full Zotero Library </a>
-                <p class="read-next">
-                    <strong>Next steps:</strong> Use the library to move from understanding
-                    engagement to navigating it thoughtfully—whether as a communicator, researcher,
-                    strategist, or simply a social media participant. </p>
+                <p class="read-next"><strong>Next steps:</strong> Use the library to move from
+                    understanding engagement to navigating it thoughtfully—whether as a
+                    communicator, researcher, strategist, or simply a social media participant. </p>
             </section>
         </main>
         <footer>
@@ -175,5 +172,28 @@
                     alt="AI Assisted Badge">
             </a>
         </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggle = document.querySelector(".mode-toggle");
+                const body = document.body;
+                
+                function setMode(mode) {
+                    body.setAttribute("data-theme", mode);
+                    localStorage.setItem("theme", mode);
+                    toggle.textContent = mode === "light" ? "🌞": "🌙";
+                }
+                
+                const saved = localStorage.getItem("theme");
+                setMode(saved ? saved: "dark");
+                
+                toggle.addEventListener("click", function () {
+                    const current = body.getAttribute("data-theme");
+                    if (current === "dark") {
+                        setMode("light");
+                    } else {
+                        setMode("dark");
+                    }
+                });
+            });</script>
     </body>
 </html>
